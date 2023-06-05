@@ -19,47 +19,50 @@ To write a program to find the LU Decomposition of a matrix.
 ## Program:
 (i) To find the L and U matrix
 ```
-#Program to find L and U matrix using LU decomposition.
-#Developed by: naveen s
-#RegisterNumber: 212222110030
+'''Program to find L and U matrix using LU decomposition.
+Developed by: naveen s
+RegisterNumber: 212222110030
+'''
 import numpy as np
 from scipy.linalg import lu
-arr=np.array(eval(input()))
-P,L,U=lu(arr)
+A=np.array(eval(input()))
+P,L,U=lu(A)
 print(L)
 print(U)
-
 ```
 (ii) To find the LU Decomposition of a matrix
 ```
 '''
-Program to solve a matrix using LU decomposition.
+'''Program to solve a matrix using LU decomposition.
 Developed by: naveen s
 RegisterNumber: 212222110030
 '''
+
 # To print X matrix (solution to the equations)
 import numpy as np
 from scipy.linalg import lu_factor,lu_solve
-arr=np.array([[3, 2, 7], [2, 3, 1], [3, 4, 1]])
-B=np.array([4, 5, 7])
-LU,P=lu_factor(arr)
-res=lu_solve((LU,P),B)
-print(res)
+A=eval(input())
+b=eval(input())
+lu,piv=lu_factor(A)
+x=lu_solve((lu,piv),b)
+print(x)
 
 ```
 
 ## Output:
 
 
+
 ### (i) To find the L and U matrix:
 
-![lu1](https://github.com/A-Thiyagarajan/LU-Decomposition/assets/118707693/ef6747d5-0a5e-4bca-a679-e4131001647a)
+![image](https://github.com/NaveenSivamalai/LU-Decomposition/assets/123792574/f3ace9b2-e863-4e00-bb4a-ecbf04ad5641)
 
 
 ### (ii) To find the LU Decomposition of a matrix:
 
+![image](https://github.com/NaveenSivamalai/LU-Decomposition/assets/123792574/eb64a04b-5e42-42b2-bf8b-62d738c66815)
 
-![lu2](https://github.com/A-Thiyagarajan/LU-Decomposition/assets/118707693/7080c634-410e-4824-80f8-8c7024203de4)
+
 
 
 ## Result:
